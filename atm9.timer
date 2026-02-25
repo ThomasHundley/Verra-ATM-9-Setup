@@ -1,0 +1,10 @@
+[Unit]
+Description=Daily Restart for ATM9 at 4am and 4pm
+
+[Timer]
+OnCalendar=*-*-* 16:00:00
+# Point to the restart service
+Unit=atm9-restart.service
+
+[Install]
+WantedBy=timers.target

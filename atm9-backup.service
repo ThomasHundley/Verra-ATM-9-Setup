@@ -1,0 +1,7 @@
+[Unit]
+Description=Daily ATM9 Maintenance (Backup + Restart)
+
+[Service]
+Type=oneshot
+User=root
+ExecStart=/usr/bin/python3 /home/ascentius/daily_maintenance.py

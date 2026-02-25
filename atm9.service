@@ -1,0 +1,19 @@
+[Unit]
+Description=All The Mods 9 Server
+After=network.target
+
+[Service]
+User=ascentius
+Group=ascentius
+WorkingDirectory=/var/atm9
+
+Type=forking
+ExecStart=/usr/bin/screen -dmS atm9 ./startserver.sh
+ExecStop=/usr/bin/screen -p 0 -S atm9 -X eval 'stuff "stop\015"'
+
+# This handles the "Restart if it crashes" logic
+Restart=on-failure
+RestartSec=20
+
+[Install]
+WantedBy=multi-user.target

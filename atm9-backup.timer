@@ -1,0 +1,9 @@
+[Unit]
+Description=Trigger Daily ATM9 Backup at 4 AM
+
+[Timer]
+OnCalendar=*-*-* 04:00:00
+Unit=atm9-backup.service
+
+[Install]
+WantedBy=timers.target

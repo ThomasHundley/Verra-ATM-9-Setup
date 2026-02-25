@@ -1,0 +1,8 @@
+[Unit]
+Description=Triggers ATM9 Restart Script
+
+[Service]
+Type=oneshot
+User=ascentius
+Group=ascentius
+ExecStart=/var/atm9/restart_script.sh
